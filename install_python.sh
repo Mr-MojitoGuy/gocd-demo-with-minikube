@@ -11,10 +11,10 @@ echo "Python 3 not found. Installing..."
 # Detectar o sistema operacional
 if [ -f /etc/debian_version ]; then
     echo "Debian distro detected..."
-    sudo apt update && sudo apt install -y python3 python3-pip
+    apt update && apt install -y python3 python3-pip
 elif [ -f /etc/redhat-release ]; then
     echo "RHEL distro detected..."
-    sudo yum install -y python3 python3-pip
+    yum install -y python3 python3-pip
 else
     echo "This system isn't supported for automatic instalation. Please, install Python manually."
     exit 1
