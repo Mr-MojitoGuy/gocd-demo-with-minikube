@@ -8,6 +8,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
+
 def fetch_cat_fact():
     url = "https://catfact.ninja/fact"
     try:
@@ -19,7 +20,7 @@ def fetch_cat_fact():
         logging.error(f"Erro ao obter factos: {e}")
         return None, None
 
+
 # Executar só se for chamado diretamente (e não via teste)
 if __name__ == "__main__":
     fetch_cat_fact()
-
